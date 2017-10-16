@@ -6,8 +6,8 @@ declare(strict_types=1);
 
 //variabler och arrayer deklareras här
 
-
-$contentArray = [
+//nedan följer EN array för allt.
+$contentArrays = [
 
 [
     'name'     =>  'Spiderman',
@@ -61,9 +61,30 @@ $contentArray = [
 
 ];
 
+//Ska här loopa fram min lagrade information, för tillfället lost.
+
+foreach ($contentArrays as $contentArray) {
+
+  foreach ($contentArray as $key => $value) {
+
+      if ($key >= '0') {
+
+      }
+  }
+
+}
 
 
-    var_dump($contentArray);
+
+// foreach ($contentArrays as $contentArray) {
+//     $name = $contentArray['name'];
+//     $time = $contentArray['time'];
+//
+//     echo "Posted by $name on $time.<br>";
+// }
+
+
+    // var_dump($contentArray);
 
 
 
