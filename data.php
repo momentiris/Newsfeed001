@@ -12,86 +12,77 @@ declare(strict_types=1);
 $contentArrays = [
 
   [
-    'name'     =>  'Spiderman',
     'title1'   =>  'My very first post...',
     'content1' =>  'Hello, web!',
     'time'     =>  '2017-01-01',
-    'ID'       =>  001,
+    'author'   =>  ['name' => 'Spiderman', 'id' => 001],
   ],
 
   [
-    'name'     =>  'Spiderman',
-    'title2'   =>  'My very second post!',
-    'content2' =>  'When I grow up I want to be a web developer!',
+    'title'    =>  'My very second post!',
+    'content'  =>  'When I grow up I want to be a web developer!',
     'time'     =>  '2017-01-03',
-    'ID'       =>  001,
-  ],
-  [
-    'name'     =>  'Batman',
-    'title1'   =>  'My very first post...',
-    'content1' =>  'Hello, cave!',
-    'time'     =>  '2017-01-02',
-    'ID'       =>  002,
-  ],
-  [
-    'name'     =>  'Batman',
-    'title2'   =>  'My very second post!',
-    'content2' =>  'Fucking scary, those damn bats!',
-    'time'     =>  '2017-01-04',
-    'ID'       =>  002,
-  ],
-
-
-  [
-    'name'     =>  'The Dude',
-    'title1'   =>  'My very first post...',
-    'content1' =>  'That\'s just like, your opinion, man.',
-    'time'     =>  '2017-01-05',
-    'ID'       =>  003,
+    'author'   =>   ['name' => 'Spiderman', 'id' => 001],
   ],
 
   [
-    'name'     =>  'The Dude',
-    'title2'   =>  'My very second post!',
-    'content2' =>  'His wife goes out, owes money all over town, and they pee on MY rug!?!?',
+    'title'   =>  'My very first post...',
+    'content' =>  'Hello, cave!',
+    'time'    =>  '2017-01-02',
+    'author'  =>  ['name' => 'Batman', 'id' => 002],
+  ],
+
+  [
+    'title'   =>  'My very second post!',
+    'content' =>  'Fucking scary, those damn bats!',
+    'time'    =>  '2017-01-04',
+    'author'  =>  ['name' => 'Batman', 'id' => 002],
+  ],
+
+  [
+    'title'   =>  'My very first post...',
+    'content' =>  'That\'s just like, your opinion, man.',
+    'time'    =>  '2017-01-05',
+    'author'  =>  ['name' => 'The Dude', 'id' => 003],
+  ],
+
+  [
+    'title'    =>  'My very second post!',
+    'content'  =>  'His wife goes out, owes money all over town, and they    pee on MY rug!?!?',
     'time'     =>  '2017-01-07',
-    'ID'       =>  003,
+    'author'   =>  ['name' => 'The Dude', 'id' => 003],
   ],
 
   [
-    'name'     =>  'Plato',
-    'title1'   =>  'My very first post...',
-    'content1' =>  'All I know is that I know nothing',
+    'title'    =>  'My very first post...',
+    'content'  =>  'All I know is that I know nothing',
     'time'     =>  '2017-01-11',
-    'ID'       =>  004,
+    'author'   =>  ['name' => 'Plato', 'id' => 004],
   ],
 
   [
-    'name'     =>  'Plato',
-    'title2'   =>  'My very second post!',
-    'content2' =>  'I like myself, alot!',
-    'time'     =>  '2017-02-04',
-    'ID'       =>  004,
-  ],
-
-
-  [
-    'name'     =>  'Aristotle',
-    'title1'   =>  'My very first post...',
-    'content1' =>  'Something, something, Eudaimonia.',
-    'time'     =>  '2017-03-05',
-    'ID'       =>  005,
+    'title'   =>  'My very second post!',
+    'content' =>  'I like myself, alot!',
+    'time'    =>  '2017-02-04',
+    'author'  =>  ['name' => 'Plato', 'id' => 004],
   ],
 
   [
-    'name'     =>  'Aristotle',
-    'title2'   =>  'My very second post!',
-    'content2' =>  'The human being is a social creature, fo sho!',
-    'time'     =>  '2017-01-06',
-    'ID'       =>  5,
+    'title'   =>  'My very first post...',
+    'content' =>  'Something, something, Eudaimonia.',
+    'time'    =>  '2017-03-05',
+    'author'  =>  ['name' => 'Aristotle', 'id' => 005],
+  ],
+
+  [
+    'title'   =>  'My very second post!',
+    'content' =>  'The human being is a social creature, fo sho!',
+    'time'    =>  '2017-01-06',
+    'author'  =>  ['name' => 'Aristotle', 'id' => 005],
   ],
 
 ];
+
 
 //Function som sorterar datum
 function sortByDate ($a, $b) {
@@ -101,7 +92,7 @@ function sortByDate ($a, $b) {
 
 usort($contentArrays, 'sortByDate');
 
-var_dump($contentArrays);
+// var_dump($contentArrays);
 
 echo '<br>';
 echo '<br>';
@@ -111,48 +102,58 @@ echo '<br>';
 
 //function och loop för att enkelt hämta specifik data
 
-  function getData(array $findWhich, string $findValue, int $i)
-  {
-    foreach ($findWhich[$i] as $post => $value) {
-      if (!strcmp($findValue, $post)) {
-        return $value;
+function getData(array $findWhich, string $findValue, int $i)
+
+{
+  foreach ($findWhich[$i] as $post => $value) {
+//nedan följer fyra rader som tillåter funktionen att även söka igenom vår //author array
+    if (is_array($value)) {
+    foreach ($value as $authorKey => $authorValue) {
+      if (!strcmp($authorKey, $findValue)) {
+        return $authorValue;
       }
     }
+  }
+
+    elseif (!strcmp($findValue, $post)) {
+      return $value;
+    }
+  }
 
 
 
-  };
-  echo getData($contentArrays, 'time', 9);
+};
+echo getData($contentArrays, 'content', 4);
 
 
 
 
-  // echo '<br>';
-  // echo '<br>';
-  // echo '<br>';
-  //
-  //
-  //
-  // //Loop som hämtar "This was posted by $name on $time"
-  // foreach ($contentArrays as $contentArray) {
-  //     $name = $contentArray['name'];
-  //     $time = $contentArray['time'];
-  //
-  //     echo "Posted by $name on $time.<br>";
-  // }
-  //
-  // echo '<br>';
-  // echo '<br>';
-  // echo '<br>';
-  //
-  //
-  //
-  // //Nedan function som sorterar efter datum.
-  // function sortFunction (array $a, array $b ) {
-  //     return strtotime($a["time"]) - strtotime($b["time"]);
-  // }
-  // usort($contentArrays, "sortFunction");
-  // var_dump($contentArrays);
-  //
-  //
-  //sorterar efter datum
+// echo '<br>';
+// echo '<br>';
+// echo '<br>';
+//
+//
+//
+// //Loop som hämtar "This was posted by $name on $time"
+// foreach ($contentArrays as $contentArray) {
+//     $name = $contentArray['name'];
+//     $time = $contentArray['time'];
+//
+//     echo "Posted by $name on $time.<br>";
+// }
+//
+// echo '<br>';
+// echo '<br>';
+// echo '<br>';
+//
+//
+//
+// //Nedan function som sorterar efter datum.
+// function sortFunction (array $a, array $b ) {
+//     return strtotime($a["time"]) - strtotime($b["time"]);
+// }
+// usort($contentArrays, "sortFunction");
+// var_dump($contentArrays);
+//
+//
+//sorterar efter datum
