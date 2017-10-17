@@ -94,10 +94,6 @@ usort($contentArrays, 'sortByDate');
 
 // var_dump($contentArrays);
 
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
 
 
 //function och loop för att enkelt hämta specifik data
@@ -123,7 +119,17 @@ function getData(array $findWhich, string $findValue, int $i)
 
 
 };
-echo getData($contentArrays, 'content', 4);
+echo getData($contentArrays, 'time', 0) . '<br>';
+echo getData($contentArrays, 'time', 1). '<br>';
+echo getData($contentArrays, 'time', 2). '<br>';
+echo getData($contentArrays, 'time', 3). '<br>';
+echo getData($contentArrays, 'time', 4). '<br>';
+echo getData($contentArrays, 'time', 5). '<br>';
+echo getData($contentArrays, 'time', 6). '<br>';
+echo getData($contentArrays, 'time', 7). '<br>';
+echo getData($contentArrays, 'time', 8). '<br>';
+echo getData($contentArrays, 'time', 9). '<br>';
+
 
 
 
