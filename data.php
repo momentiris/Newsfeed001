@@ -94,11 +94,24 @@ $contentArrays = [
 ];
 
 
+function sortByDate ($a, $b) {
 
+  return strtotime ($a['time']) > strtotime ($b ['time']);
+}
+
+usort($contentArrays, 'sortByDate');
+
+var_dump($contentArrays);
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+//function och loop för att enkelt hämta specifik data
 
   function getData(array $findWhich, string $findValue, int $i)
   {
-    foreach ($findValue[$i] as $post => $value) {
+    foreach ($findWhich[$i] as $post => $value) {
       if (!strcmp($findValue, $post)) {
         return $value;
       }
@@ -107,21 +120,10 @@ $contentArrays = [
 
 
   };
-  echo getData($contentArrays, 'name', 0);
+  echo getData($contentArrays, 'time', 9);
 
 
-  // function getQuotes(int $count): array
-  // {
-  //     $quotes = [
-  //         'All righty then!',
-  //         'So... animals CAN sense evil!',
-  //         'If I\'m not back in 5 minutes, just wait longer.',
-  //         'That was close one ladies and gentlemen, of course in every contest, there must be, a loser.',
-  //     ];
-  //
-  //     return array_splice($quotes, $count);
-  // }
-  //
+
 
   // echo '<br>';
   // echo '<br>';
@@ -151,15 +153,4 @@ $contentArrays = [
   // var_dump($contentArrays);
   //
   //
-  // //sorterar efter datum
-  // function sortByDate ($a, $b) {
-  //
-  //   return(int) $a['time'] > (int) $b ['time'];
-  // }
-  //
-  // usort($contentArrays, 'sortByDate');
-  //
-  //
-  // foreach ($contentArrays as $post) {
-  //     echo $post['time']. '<br>';
-  // }
+  //sorterar efter datum
