@@ -93,7 +93,7 @@ $contentArrays = [
 
 ];
 
-
+//Function som sorterar datum
 function sortByDate ($a, $b) {
 
   return strtotime ($a['time']) > strtotime ($b ['time']);
@@ -107,6 +107,8 @@ echo '<br>';
 echo '<br>';
 echo '<br>';
 echo '<br>';
+
+
 //function och loop för att enkelt hämta specifik data
 
   function getData(array $findWhich, string $findValue, int $i)
