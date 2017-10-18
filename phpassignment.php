@@ -17,6 +17,17 @@ require __DIR__.'/functions.php';
 
         <div class="backgroundimage">
         </div>
+
+        <!-- <form class="form" action="phpassignment.php" method="post">
+          Name: <input type="text" name="name">
+          Message: <input type="text" name="title" value="">
+          Title: <input type="text" name="" value="">
+                <input type="submit">
+
+        </form> -->
+
+
+
         <?php foreach ($contentArrays as $contentArray): ?>
 
           <div class="hideme">
@@ -39,14 +50,7 @@ require __DIR__.'/functions.php';
 
 
 
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-          <script type="text/javascript">
-          $(window).scroll(function(i){
-  var scrollVar = $(window).scrollTop();
-  $('.hideme').children('h2').css({'top': .7*scrollVar });
- )/100});
-})
-          </script>
+
 
 
 

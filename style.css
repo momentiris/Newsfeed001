@@ -15,6 +15,14 @@ body {
   justify-content: center;
 }
 
+.form {
+  height: 40vh;
+  width: 90vw;
+  background-color: grey;
+  margin-bottom: 20px;
+
+
+}
 .backgroundimage {
   margin-top: 10px;
 

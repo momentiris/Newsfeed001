@@ -5,7 +5,7 @@ declare(strict_types=1);
 //Function som sorterar datum
 function sortByDate ($a, $b) {
 
-  return strtotime ($a['time']) > strtotime ($b ['time']);
+  return strtotime ($a['time']) < strtotime ($b ['time']);
 }
 
 usort($contentArrays, 'sortByDate');
