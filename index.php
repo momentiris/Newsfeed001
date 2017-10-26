@@ -18,15 +18,7 @@ require __DIR__.'/functions.php';
         <div class="backgroundimage">
         </div>
 
-        <!-- <form class="form" action="phpassignment.php" method="post">
-          Name: <input type="text" name="name">
-          Message: <input type="text" name="title" value="">
-          Title: <input type="text" name="" value="">
-                <input type="submit">
-
-        </form> -->
-
-
+        <!-- Below, we loop through our array fom data.php in order to echo out the different parts (values) of it in different sections of our html. -->
 
         <?php foreach ($contentArrays as $contentArray): ?>
 
@@ -47,33 +39,6 @@ require __DIR__.'/functions.php';
           </div>
 
           <?php endforeach ?>
-
-
-
-
-
-
-
-
-
-    <!-- /*
-     n  Authors och content behöver lagras i arrays, antingen i en multimensionell eller två separata.
-      The news feed items should contain:
-
-          - Title
-          - Content
-          - Author name
-          - Published date
-          - Like counter (the number of likes a news feed item has received)
-
-      The news feed author items should contain the following data:
-
-          - ID
-          - Full name
-
-
-    */ -->
-
 
 
   </body>
