@@ -19,7 +19,7 @@ $contentArrays = [
     'content'   =>  '   Hello, web! Also, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'time'      =>  '2017-01-01',
     'likes'     =>   99,
-    'author'    => ['id' => 101, 'name'  => 'DefinatelynotSpiderman']
+    'author'    => ['id' => 101, 'name'      => 'DefinatelynotSpiderman']
   ],
 
   [
@@ -27,7 +27,7 @@ $contentArrays = [
     'content'   =>  '    When I grow up I want to be a web developer! Also, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'time'      =>  '2017-01-03',
     'likes'     =>   2,
-      'author'  => ['id' => 101, 'name'  => 'DefinatelynotSpiderman']
+      'author'  => ['id' => 101, 'name'    => 'DefinatelynotSpiderman']
   ],
 
   [
@@ -35,7 +35,7 @@ $contentArrays = [
     'content'   =>  '   Hello, cave! Also, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'time'      =>  '2017-01-02',
     'likes'     =>   6,
-    'author'    =>    ['id' => 102, 'name'  => 'Batman']
+    'author'    =>    ['id' => 102, 'name' => 'Batman']
   ],
 
   [
@@ -43,7 +43,7 @@ $contentArrays = [
     'content'   =>  '   Fucking scary, those damn bats! Also, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'time'      =>  '2017-01-04',
     'likes'     =>   65,
-    'author'    => ['id' => 102, 'name'  => 'Batman']
+    'author'    => ['id' => 102, 'name'      => 'Batman']
   ],
 
   [
@@ -51,7 +51,7 @@ $contentArrays = [
     'content'   =>  '   That\'s just like, your opinion, man. Also, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'time'      =>  '2017-01-05',
     'likes'     =>   34,
-    'author'    => ['id' => 103, 'name'  => 'The Dude']
+    'author'    => ['id' => 103, 'name'     => 'The Dude']
   ],
 
   [
@@ -59,7 +59,7 @@ $contentArrays = [
     'content'   =>  'His wife goes out, owes money all over town, and they pee on MY rug!?!? I\'m tired of this fucking Lebowski guy!',
     'time'      =>  '2017-01-07',
     'likes'     =>   19,
-    'author'    => ['id' => 103, 'name'  => 'The Dude']
+    'author'    => ['id' => 103, 'name'      => 'The Dude']
   ],
 
   [
@@ -67,7 +67,7 @@ $contentArrays = [
     'content'   =>  'All I know is that I know nothing. Also, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'time'      =>  '2017-01-11',
     'likes'     =>   0,
-    'author'    =>   ['id' => 104, 'name'  => 'Plato']
+    'author'    =>   ['id' => 104, 'name'      => 'Plato']
   ],
 
   [
@@ -75,7 +75,7 @@ $contentArrays = [
     'content'   =>  'I like myself, alot! Also, lorem something, something.',
     'time'      =>  '2017-02-04',
     'likes'     =>   71,
-    'author'    =>   ['id' => 104, 'name'  => 'Plato']
+    'author'    =>   ['id' => 104, 'name'      => 'Plato']
   ],
 
   [
@@ -84,7 +84,7 @@ $contentArrays = [
     something, something. Ok I am done now.',
     'time'      =>  '2017-03-05',
     'likes'     =>   2,
-    'author'    =>   ['id' => 105, 'name'  => 'Aristotle']
+    'author'    =>   ['id' => 105, 'name'      => 'Aristotle']
   ],
 
   [
@@ -92,10 +92,7 @@ $contentArrays = [
     'content'   =>  '   The human being is a social creature, fo sho! Also, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur .',
     'time'      =>  '2017-01-06',
     'likes'     =>   0,
-    'author'    =>   ['id' => 105, 'name'  => 'Aristotle']
+    'author'    =>   ['id' => 105, 'name'      => 'Aristotle']
   ],
 
 ];
-
-
-$_POST;
